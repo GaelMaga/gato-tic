@@ -1,0 +1,72 @@
+body {
+    margin: 2rem;
+    color: #111;
+    background: #fff;
+    font-family: monospace;
+    line-height: 1.6;
+}
+
+main {
+    max-width: 42rem;
+}
+
+#board {
+    font: inherit;
+    white-space: pre;
+}
+
+input,
+button {
+    border: 0;
+    color: inherit;
+    background: transparent;
+    font: inherit;
+}
+
+input {
+    width: 3ch;
+    border-bottom: 1px solid currentColor;
+}
+
+label {
+    margin-right: 0.5rem;
+}
+
+button {
+    margin-left: 1rem;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+#reset {
+    display: block;
+    margin: 1rem 0 0;
+}
+
+input:focus-visible,
+button:focus-visible {
+    outline: 1px solid currentColor;
+    outline-offset: 2px;
+}
+
+@media (max-width: 520px) {
+    body {
+        margin: 1rem;
+    }
+
+    #board {
+        font-size: min(3vw, 1rem);
+    }
+
+    #move-form {
+        display: grid;
+        grid-template-columns: auto 1fr;
+        gap: 0.5rem;
+    }
+
+    #move-form button {
+        grid-column: 2;
+        margin-left: 0;
+        text-align: left;
+    }
+}

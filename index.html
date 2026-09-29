@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gato | Tres en raya</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <main>
+        <h1>Gato</h1>
+        <p>Elige una posicion y escribe la marca de tu turno</p>
+        <p id="status" role="status" aria-live="polite">Turno del Jugador 1. Escribe X</p>
+        <pre id="board" aria-label="Tablero de gato en texto"></pre>
+        <form id="move-form">
+            <label for="position">Posicion del 1 al 9</label>
+            <input id="position" name="position" type="text" inputmode="numeric" autocomplete="off" aria-label="Posicion del 1 al 9" aria-describedby="status" required>
+            <label for="mark">Escribe X u O</label>
+            <input id="mark" name="mark" type="text" maxlength="1" autocomplete="off" aria-label="Marca X u O" aria-describedby="status" required>
+            <button type="submit">Jugar</button>
+        </form>
+        <button id="reset" type="button">Nueva partida</button>
+    </main>
+    <script src="script.js" defer></script>
+</body>
+</html>
